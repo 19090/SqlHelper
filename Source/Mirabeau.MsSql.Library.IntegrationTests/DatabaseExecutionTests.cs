@@ -2,6 +2,9 @@
 using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
+using System.Threading.Tasks;
+using AutoMapper;
+using Mirabeau.Sql.Library;
 using NUnit.Framework;
 
 namespace Mirabeau.MsSql.Library.IntegrationTests
@@ -156,5 +159,13 @@ namespace Mirabeau.MsSql.Library.IntegrationTests
 
             Assert.That(i, Is.GreaterThan(0));
         }
+
+
+    }
+
+    public class Tables
+    {
+        public string TABLE_SCHEMA { get; set; }
+        public string TableName { get; set; }
     }
 }
