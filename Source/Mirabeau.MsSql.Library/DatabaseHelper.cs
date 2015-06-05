@@ -36,9 +36,13 @@ namespace Mirabeau.MsSql.Library
     /// <remarks>
     /// In the AppSettings there is an option to set the value of the SqlCommandTimeout, to change the default SQL timeout.
     /// </remarks>
-    public static class DatabaseHelper
+    public class DatabaseHelper
     {
         private static readonly IMsSqlHelper MsSqlHelper = new MsSqlHelper();
+
+        protected DatabaseHelper()
+        {
+        }
 
         /// <summary>
         /// Gets or sets the command timeout property. Default value is read from config.

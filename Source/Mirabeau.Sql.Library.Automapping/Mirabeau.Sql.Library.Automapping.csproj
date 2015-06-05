@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EE337C58-D756-441D-A91B-80A94A2FD627}</ProjectGuid>
+    <ProjectGuid>{6A28F44E-A397-4B35-9C95-85AD8C74E9FE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Mirabeau.MsSql.Library.IntegrationTests</RootNamespace>
-    <AssemblyName>Mirabeau.MsSql.Library.IntegrationTests</AssemblyName>
+    <RootNamespace>Mirabeau.Sql.Library.Automapping</RootNamespace>
+    <AssemblyName>Mirabeau.Sql.Library.Automapping</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
@@ -22,6 +22,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <DocumentationFile>bin\Debug\Mirabeau.Sql.Library.Automapping.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -40,10 +42,6 @@
       <HintPath>..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.Net4.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
-      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -53,25 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DatabaseExecutionTests.cs" />
-    <Compile Include="DateTimeParameterIntegrationTests.cs" />
-    <Compile Include="GlobalSuppressions.cs" />
-    <Compile Include="MappingTests.cs" />
+    <Compile Include="ISqlHelperWithModelMapping.cs" />
+    <Compile Include="SqlHelperWithModelMapping.cs" />
+    <Compile Include="ModelMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Mirabeau.MsSql.Library.Automapping\Mirabeau.MsSql.Library.Automapping.csproj">
-      <Project>{6396E012-72AB-44CB-8FE7-5CE310E4A447}</Project>
-      <Name>Mirabeau.MsSql.Library.Automapping</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Mirabeau.MsSql.Library\Mirabeau.MsSql.Library.csproj">
-      <Project>{B7EF69F5-0582-4C03-B8D0-ADE4060ED8FC}</Project>
-      <Name>Mirabeau.MsSql.Library</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Mirabeau.Sql.Library.Automapping\Mirabeau.Sql.Library.Automapping.csproj">
-      <Project>{6A28F44E-A397-4B35-9C95-85AD8C74E9FE}</Project>
-      <Name>Mirabeau.Sql.Library.Automapping</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Mirabeau.Sql.Library\Mirabeau.Sql.Library.csproj">
       <Project>{0d304d74-5711-401f-9e23-0485524821e2}</Project>
       <Name>Mirabeau.Sql.Library</Name>

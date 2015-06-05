@@ -4,7 +4,7 @@ using System.Data.Common;
 using System.Threading.Tasks;
 using AutoMapper;
 
-namespace Mirabeau.Sql.Library
+namespace Mirabeau.Sql.Library.Automapping
 {
     public interface IModelMapper
     {

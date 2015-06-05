@@ -2,7 +2,9 @@
 using System.Data;
 using System.Linq;
 using AutoMapper;
+using Mirabeau.MsSql.Library.Automapping;
 using Mirabeau.Sql.Library;
+using Mirabeau.Sql.Library.Automapping;
 using NUnit.Framework;
 
 namespace Mirabeau.MsSql.Library.IntegrationTests
@@ -11,7 +13,7 @@ namespace Mirabeau.MsSql.Library.IntegrationTests
     public class MappingTests
     {
         private const string Connectionstring = "Server=TEST-DB1;Database=master;Integrated Security=true";
-        private readonly MsSqlHelper _sqlHelper = new MsSqlHelper();
+        private readonly ISqlHelperWithModelMapping _sqlHelper = new MsSqlHelperWithModelMapping();
 
         [Test]
         public void ShouldPerformDynamicMapWhenMappingNotDefined()

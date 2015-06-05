@@ -2,9 +2,18 @@
 
 namespace Mirabeau.Sql.Library
 {
-    internal static class TaskExtentions
+    /// <summary>
+    /// Extention methods for <see cref="Task"/>
+    /// </summary>
+    public static class TaskExtentions
     {
-        internal static T TaskResult<T>(this Task<T> task)
+        /// <summary>
+        /// Gets the result from a task.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="task"></param>
+        /// <returns></returns>
+        public static T TaskResult<T>(this Task<T> task)
         {
             return task.GetAwaiter().GetResult();
         }
