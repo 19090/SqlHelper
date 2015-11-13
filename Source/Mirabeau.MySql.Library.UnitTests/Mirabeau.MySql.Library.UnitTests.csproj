@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>Mirabeau.MySql.Library.UnitTests.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -30,6 +31,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>Mirabeau.MySql.Library.UnitTests.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MySql.Data, Version=6.7.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
@@ -55,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Mirabeau.MySql.Library.UnitTests.ruleset" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -62,9 +65,9 @@
       <Project>{AADED218-6603-4ED4-8BBA-0F994CC62286}</Project>
       <Name>Mirabeau.MySql.Library</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Mirabeau.Sql.Library\Mirabeau.Sql.Library.csproj">
+    <ProjectReference Include="..\Mirabeau.Sql\Mirabeau.Sql.csproj">
       <Project>{0D304D74-5711-401F-9E23-0485524821E2}</Project>
-      <Name>Mirabeau.Sql.Library</Name>
+      <Name>Mirabeau.Sql</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>Mirabeau.MsSql.Library.IntegrationTests.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -30,9 +31,13 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>Mirabeau.MsSql.Library.IntegrationTests.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.SqlServer.Types, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Types, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.11.0.2\lib\net20\Microsoft.SqlServer.Types.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
       <Private>True</Private>
@@ -67,12 +72,13 @@
       <Project>{B7EF69F5-0582-4C03-B8D0-ADE4060ED8FC}</Project>
       <Name>Mirabeau.MsSql.Library</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Mirabeau.Sql.Library\Mirabeau.Sql.Library.csproj">
+    <ProjectReference Include="..\Mirabeau.Sql\Mirabeau.Sql.csproj">
       <Project>{0d304d74-5711-401f-9e23-0485524821e2}</Project>
-      <Name>Mirabeau.Sql.Library</Name>
+      <Name>Mirabeau.Sql</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Mirabeau.MsSql.Library.IntegrationTests.ruleset" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
