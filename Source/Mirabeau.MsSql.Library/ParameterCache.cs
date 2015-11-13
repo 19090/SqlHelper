@@ -115,8 +115,10 @@ namespace Mirabeau.MsSql.Library
         [SuppressMessage("Microsoft.Reliability", "CA2000:DisposeObjectsBeforeLosingScope")]
         public IList<SqlParameter> GetStoredProcedureParameterSet(string connectionString, string storedProcdureName)
         {
-            SqlConnection connection = new SqlConnection(connectionString);
-            return GetStoredProcedureParameterSet(null, connection, storedProcdureName, false);
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                return GetStoredProcedureParameterSet(null, connection, storedProcdureName, false);
+            }
         }
 
         /// <summary>
@@ -154,7 +156,7 @@ namespace Mirabeau.MsSql.Library
                 throw new ArgumentException(String_Resources.CannotbeNullOrEmpty, "storedProcedureName");
             }
 
-            string hashKey = connection.ConnectionString + ":" + storedProcedureName + 
+            string hashKey = connection.ConnectionString + ":" + storedProcedureName +
                              (includeReturnValueParameter ? ":include ReturnValue Parameter" : "");
 
             IList<SqlParameter> cachedParameters = null;
@@ -165,9 +167,9 @@ namespace Mirabeau.MsSql.Library
 
             if (cachedParameters == null)
             {
-                cachedParameters =
-                    ParamCache[hashKey] =
-                        DiscoverSpParameterSet(connectionString, connection, storedProcedureName, includeReturnValueParameter);
+                var parameterSet = DiscoverSpParameterSet(connectionString, connection, storedProcedureName, includeReturnValueParameter);
+                cachedParameters = parameterSet;
+                ParamCache[hashKey] = parameterSet;
             }
 
             return CloneParameters(cachedParameters);
