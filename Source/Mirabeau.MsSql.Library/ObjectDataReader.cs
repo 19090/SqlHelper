@@ -184,13 +184,10 @@ namespace Mirabeau.MsSql.Library
         /// <param name="disposing"></param>
         protected void Dispose(bool disposing)
         {
-            if (disposing)
+            if (disposing && _dataEnumerator != null)
             {
-                if (_dataEnumerator != null)
-                {
-                    _dataEnumerator.Dispose();
-                    _dataEnumerator = null;
-                }
+                _dataEnumerator.Dispose();
+                _dataEnumerator = null;
             }
         }
 
