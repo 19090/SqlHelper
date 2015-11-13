@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>Mirabeau.MySql.Library</id>
+    <id>MySqlHelper</id>
     <version>$version$</version>
-    <title>Mirabeau.MySql.Library</title>
+    <title>MySqlHelper</title>
     <authors>Jeroen Pot</authors>
     <owners>Jeroen Pot</owners>
-    <projectUrl>https://github.com/mirabeau-nl/Mirabeau-Sql-Helper</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/Mirabeau-Sql-Helper/develop/mysql-icon.png</iconUrl>
+    <projectUrl>https://github.com/jeroenpot/Mirabeau-Sql-Helper</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/jeroenpot/Mirabeau-Sql-Helper/develop/mysql-icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
       Static helper class for performing MYSQL operations.
@@ -16,7 +16,7 @@
     <copyright>Copyright 2015</copyright>
     <tags>SqlHelper,MySql, DatabaseHelper, SQL, MySqlHelper</tags>
     <dependencies>
-      <dependency id="MySql.Data" version="6.7.8" />
+      <dependency id="MySql.Data" />
     </dependencies>
   </metadata>
 </package>
