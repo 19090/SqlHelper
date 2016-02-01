@@ -8,7 +8,7 @@ Currently it supports both MsSql and MySql databases.
 The base sourcecode was taken from the Microsoft .NET Data Access Application Block v2.0 and improved to support the latest .net Frameworks and has build in support for asynchronous programming (async/await)
 There is also a now-static version (MsSqlHelper : IMsSqlHelper & MySqlHelper : IMySqlHelper)
 
-The is also an option to generate Sql-staments for queries and stored procedure with parameter declaration to debug your queries in Sql Server Managerment studio (Sql-server only).
+There is also an option to generate Sql-staments for queries and stored procedure with parameter declaration to debug your queries in Sql Server Managerment studio (Sql-server only).
 
 Build status| Coverage Status| NuGet downloads (MSSql) | NuGet downloads (MYSQL)
 ----------- | -------------- | --------------- | ---------------
