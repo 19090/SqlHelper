@@ -12,7 +12,7 @@ There is also an option to generate Sql-staments for queries and stored procedur
 
 Build status| Coverage Status| NuGet downloads (MSSql) | NuGet downloads (MYSQL)
 ----------- | -------------- | --------------- | ---------------
-[![Build status](https://ci.appveyor.com/api/projects/status/ip703gxi2cy8i6bh?svg=true)](https://ci.appveyor.com/project/jeroenpot/sqlhelper)|[![Coverage Status](https://coveralls.io/repos/jeroenpot/SqlHelper/badge.svg?branch=&service=github)](https://coveralls.io/github/jeroenpot/SqlHelper?branch=)|[![NuGet downloads MsSqlHelper](https://img.shields.io/nuget/v/MsSqlHelper.svg?maxAge=2592000)](https://www.nuget.org/packages/MsSqlHelper)|[![NuGet downloads MySqlHelper](https://img.shields.io/nuget/v/MySqlHelper.svg?maxAge=2592000)](https://www.nuget.org/packages/MySqlHelper)
+[![Build status](https://ci.appveyor.com/api/projects/status/ip703gxi2cy8i6bh?svg=true)](https://ci.appveyor.com/project/jeroenpot/sqlhelper)|[![Coverage Status](https://coveralls.io/repos/jeroenpot/SqlHelper/badge.svg?branch=&service=github)](https://coveralls.io/github/jeroenpot/SqlHelper?branch=)|[![NuGet downloads MsSqlHelper](https://buildstats.info/nuget/MsSqlHelper)](https://www.nuget.org/packages/MsSqlHelper)|[![NuGet downloads MySqlHelper](https://buildstats.info/nuget/MySqlHelper)](https://www.nuget.org/packages/MySqlHelper)
 
 ### Examples ###
 #### Sql parameters ####
